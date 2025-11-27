@@ -62,8 +62,6 @@ class XMLParagraphExtractor:
         Returns:
             DataFrame containing extracted paragraphs and metadata
         """
-        file_metadata = self.parse_filename(fname)
-
         with open(fname, 'r', encoding='utf-8') as f:
             data = f.read()
 
@@ -78,7 +76,16 @@ class XMLParagraphExtractor:
 
         # Extract the imageFilename attribute
         page_elem = root.find('.//ns:Page', self.namespaces)
-        image_filename = page_elem.get('imageFilename') if page_elem is not None else None
+        if page_elem is not None:
+            image_filename = page_elem.get('imageFilename')
+        else:
+            image_filename = None
+
+        # Parse metadata from the IMAGE filename (not the XML filename)
+        if image_filename:
+            file_metadata = self.parse_filename(image_filename)
+        else:
+            raise ValueError(f"No imageFilename found in XML file: {fname}")
 
         # Process each text region
         for text_region in root.findall('.//ns:TextRegion', self.namespaces):
@@ -109,9 +116,12 @@ class XMLParagraphExtractor:
             contents['region_type'].append(region_type)
             contents['filename'].append(image_filename)
 
-            # Collect: newspaper, year, month, date, page_num
-            for k in file_metadata.keys():
-                contents[k].append(file_metadata[k])
+            # Collect metadata in the correct order: newspaper, year, month, date, page_num
+            contents['newspaper'].append(file_metadata['newspaper'])
+            contents['year'].append(file_metadata['year'])
+            contents['month'].append(file_metadata['month'])
+            contents['date'].append(file_metadata['date'])
+            contents['page_num'].append(file_metadata['page_num'])
 
         return pd.DataFrame(contents)
 
