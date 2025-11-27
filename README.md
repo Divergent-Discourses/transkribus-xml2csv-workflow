@@ -354,10 +354,10 @@ Please acknowledge the Divergent Discourses project in any use of these material
 
 **Development**:
 - **Original Paragraph Extractor**: James Engels, modified by Christina Sabbagh (SOAS University of London)
-- **Text Normalizer**: Developed for Tibetan text processing
-- **Workflow Integration**: Unified processing pipeline
+- **Text Normalizer**: Developed for Tibetan text processing by Yuki Kyogoku and Franz Xaver Erhard
+- **Workflow Integration**: Unified processing pipeline by Franz Xaver Erhard
 
-**Project**: [Divergent Discourses](https://www.soas.ac.uk/)  
+**Project**: Divergent Discourses  
 **Institutions**: SOAS University of London & Leipzig University  
 **Funding**: AHRC (UK) & DFG (Germany)
 
