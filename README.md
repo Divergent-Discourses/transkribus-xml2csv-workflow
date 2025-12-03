@@ -3,6 +3,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Project](https://img.shields.io/badge/project-Divergent%20Discourses-orange.svg)](https://www.soas.ac.uk/)
+[![DOI](https://zenodo.org/badge/1105337291.svg)](https://doi.org/10.5281/zenodo.17801502) 
 
 A unified pipeline for processing Transkribus PageXML outputs with integrated text normalization for Tibetan text. This tool combines paragraph extraction, text normalization, and CSV merging into a single configurable workflow. The workflow integrates [transkribus_XML2CSV](https://github.com/Divergent-Discourses/transkribus_xml2csv), developed by James Engels and Christina Sabbagh, with [TibNormCSV](https://github.com/Divergent-Discourses/TibNormCSV), developed by Yuki Kyogoku and Franz Xaver Erhard, and adapted by Christina Sabbagh.
 
