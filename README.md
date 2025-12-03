@@ -218,10 +218,14 @@ log_file = ./logs/workflow.log
 
 Files should follow the naming convention:
 ```
-XXXX_NEWSPAPER_YEAR_MONTH_DAY_PAGE_[optional].jpg
+XXXX_NEWSPAPER_YEAR_MONTH_DAY_PAGE_[optional].xml
+```
+or (see [Bug fixes applied](BUG_FIXES_APPLIED.md))
+```
+NEWSPAPER_YEAR_MONTH_DAY_PAGE_[optional].xml
 ```
 
-Example: `0001_QTN_1952_07_05_001_SB_Zsn128163MR.jpg`
+Example: `0001_QTN_1952_07_05_001_SB_Zsn128163MR.xml` or `QTN_1952_07_05_001_SB_Zsn128163MR.xml`
 
 Where:
 - `XXXX`: Transkribus-assigned ID (4 digits)
@@ -231,6 +235,8 @@ Where:
 - `DAY`: Publication day (e.g., 05)
 - `PAGE`: Page number (e.g., 001)
 - `[optional]`: Additional metadata (ignored)
+
+For detailed information on the naming convention, see [Erhard, Franz Xaver 2025. "The Divergent Discourses Corpus. A Digital Collection of Early Tibetan Newspapers from the 1950s and 1960s." In F.X. Erhard, R. Barnett, and N.W. Hill (eds.) “From Print to Pixels: Building Digital Tools for Modern Tibetan Textual Analysis.” Special issue, Revue d'études tibétaines (RET). (74), 77–80.](https://d1i1jdw69xsqx0.cloudfront.net/digitalhimalaya/collections/journals/ret/pdf/ret_74_02.pdf)
 
 ### Normalization Tables
 
